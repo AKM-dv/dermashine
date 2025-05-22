@@ -1,0 +1,125 @@
+/* Contact Section */
+.contact-section {
+  background-color: var(--off-white);
+  padding: var(--space-xxl) 0;
+}
+
+.contact-container {
+  display: flex;
+  gap: var(--space-xl);
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-info p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.info-item i {
+  margin-right: var(--space-md);
+  font-size: var(--font-size-lg);
+  color: var(--white);
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all var(--transition-normal);
+}
+
+.social-icons a:hover {
+  background-color: var(--white);
+  transform: translateY(-3px);
+}
+
+.social-icons a:hover i {
+  color: var(--primary-color);
+}
+
+.social-icons i {
+  font-size: var(--font-size-md);
+  color: var(--white);
+}
+
+.contact-form {
+  flex: 1.2;
+  background-color: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form h3 {
+  font-size: var(--font-size-xl);
+  color: var(--primary-dark);
+  margin-bottom: var(--space-lg);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: var(--space-md);
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
