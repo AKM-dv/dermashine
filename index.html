@@ -28,10 +28,10 @@ body {
     <div class="top-icons">
     <p> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 	<path fill="#fff905" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" stroke-width="0.5" stroke="#fff905" />
-</svg> 205 office Al Diyafah Building, Dubai International Airport Area |
+</svg> Derma Shine Skin & Hair Clinic, Muzammil Market, near Police Chowki, Sarai Tarin, Uttar Pradesh 244303|
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 	<path fill="#fff905" d="M4.616 19q-.691 0-1.153-.462T3 17.384V6.616q0-.691.463-1.153T4.615 5h14.77q.69 0 1.152.463T21 6.616v10.769q0 .69-.463 1.153T19.385 19zM12 12.116l8-5.231L19.692 6L12 11L4.308 6L4 6.885z" stroke-width="0.5" stroke="#fff905" />
-</svg> admin@pureskinuae.com</p>
+</svg> info@dermashine.in</p>
 </div>
 <style>
     .top-header {
@@ -57,83 +57,31 @@ body {
   </div>
 
   <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">PURE <span>Skin Clinic</span></div>
-    <nav>
-      <a href="#Home">Home</a>
-      <a href="#AboutUs">About Us</a>
-      <a href="#Services">Services</a>
-      <a href="#Gallery">Gallery</a>
-      <a href="#Contact">Contact</a>
-    </nav>
-    <div class="contact-numbers">
-      <p>📞 +971 52 224 5510</p>
-      <p>📞 +971 4 852 6990</p>
-    </div>
-    <style>
-.navbar a {
-  position: relative;
-  text-decoration: none;
-  color: rgb(255, 255, 255); /* or whatever your base color is */
-  padding: 5px 10px;
-}
-.navbar a:hover {
-  color: #A0522D; 
-}
-.navbar a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #A0522D; 
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease;
-}
+ <header class="navbar">
+  <div class="logo">DERMA SHINE SKIN &<span> HAIR CLINIC</span></div>
 
-.navbar a:hover::after {
-  width: 100%;
- 
-}
+  <!-- Hamburger Icon for Mobile -->
+  <div class="navbar-toggle" onclick="toggleNavbar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
+  <!-- Navigation Links -->
+  <nav class="navbar-links">
+    <a href="#Home">Home</a>
+    <a href="#AboutUs">About Us</a>
+    <a href="#Services">Services</a>
+    <a href="#Gallery">Gallery</a>
+    <a href="#Contact">Contact</a>
+  </nav>
 
-
-
-  .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 40px;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #d29d3c;
-}
-
-.logo span {
-  color: #333;
-  font-weight: normal;
-}
-
-.navbar nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.contact-numbers p {
-  font-size: 13px;
-}
-
-
-
-/* Navbar Responsive Design */
-.navbar {
+  <!-- Contact Number -->
+  <div class="contact-numbers">
+    <p><a href="tel:+919548950589">📞 +91 9548950589</a></p>
+  </div>
+  <style>
+    .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,23 +103,20 @@ body {
   font-weight: normal;
 }
 
-.navbar nav {
+/* Navbar Links */
+.navbar-links {
   display: flex;
   gap: 15px;
 }
 
-.contact-numbers {
-  text-align: right;
-}
-
-.navbar nav a {
+.navbar-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   position: relative;
 }
 
-.navbar nav a::after {
+.navbar-links a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -182,15 +127,27 @@ body {
   transition: width 0.3s ease;
 }
 
-.navbar nav a:hover::after {
+.navbar-links a:hover::after {
   width: 100%;
 }
 
+/* Contact number */
+.contact-numbers p {
+  font-size: 13px;
+}
+
+/* Make contact link clickable */
+.contact-numbers a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hamburger Button */
 .navbar-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 4px;
 }
 
 .navbar-toggle span {
@@ -198,51 +155,47 @@ body {
   height: 3px;
   background-color: #333;
   display: block;
+  border-radius: 2px;
 }
 
-/* Responsive styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar nav, .contact-numbers {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .navbar.open nav, .navbar.open .contact-numbers {
-    display: flex;
+  .navbar {
+    flex-direction: row;
+    align-items: center;
   }
 
   .navbar-toggle {
     display: flex;
+    margin-left: auto;
   }
 
-  .logo {
+  .navbar-links, .contact-numbers {
+    display: none;
+    flex-direction: column;
     width: 100%;
     text-align: left;
+    padding: 10px 0;
   }
 
-  .navbar {
-    align-items: flex-start;
-  }
-}
-
-/* Top Header Responsive */
-@media (max-width: 768px) {
-  .top-icons {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  .navbar.open .navbar-links,
+  .navbar.open .contact-numbers {
+    display: flex;
   }
 
-  .top-header {
-    text-align: left;
+  .navbar-links a {
+    padding: 10px 0;
   }
 }
 
-    </style>
-  </header>
+  </style>
+  <script>
+  function toggleNavbar() {
+    document.querySelector('.navbar').classList.toggle('open');
+  }
+</script>
+
+</header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -250,10 +203,10 @@ body {
 
    
     <div class="hero-text">
-      <h3>WELCOME TO PURE SKIN CLINIC IN DUBAI</h3>
+      <h3>WELCOME TO DERMA SHINE SKIN & HAIR CLINIC</h3>
       <h1>Welcome To Our Clinic, Offering The Best In<br>
         Dermatology, Cosmetology, And Skincare Treatments.</h1>
-      <p>Professional and Advanced Skin Treatment by Our Team of Top Skin Specialists in Dubai.</p>
+      <p>Professional and Advanced Skin Treatment by Our Team of Top Skin Specialists in Uttar Pradesh.</p>
       <button>VIEW SERVICES</button>
     </div>
 
@@ -374,8 +327,7 @@ body {
     <div class="consult-box hidden-on-load">
       <h2>Consult With Our Doctors</h2>
       <p>We provide cosmetic dermatological treatment in a comfortable and caring environment.</p>
-    📞 +971 52 224 5510 <br>
-    📞 +971 4 852 6990
+    📞 +91 9548950589 
     </div>
 
     <script>
@@ -613,10 +565,10 @@ body {
 
    <section class="about-section">
     <div class="about-left">
-      <p class="about-subtitle">About Pure Skin Clinic</p>
+      <p class="about-subtitle">About Derma Shine Skin & Hair Clinic</p>
       <h2 class="about-title">We Provide The Best Dermatology And Skin Treatments</h2>
       <p class="about-description">
-        Pure Skin Clinic Dubai is committed to providing the highest level of personalized care in a gentle, efficient, and professional manner. Our advanced technology is both gentle and effective, and all skin treatments are performed by experienced dermatologists with advanced training.
+        About Derma Shine Skin & Hair Clinic is committed to providing the highest level of personalized care in a gentle, efficient, and professional manner. Our advanced technology is both gentle and effective, and all skin treatments are performed by experienced dermatologists with advanced training.
       </p>
 
       <div class="about-features">
@@ -808,7 +760,7 @@ body {
     <!-- Botox Card -->
  <div class="services-row">
     <div class="service-card">
-      <img src="botox-img.webp" alt="Botox Treatment" class="service-img">
+      <img src="botox-img.jpg" alt="Botox Treatment" class="service-img">
       <div class="card-content">
         <div class="card-icon">
           <img src="https://img.icons8.com/ios-filled/30/ebb031/syringe.png" alt="Botox Icon">
@@ -1148,9 +1100,9 @@ body {
   <div class="background" id="bg"></div>
 
   <div class="overlay">
-    <div class="box" data-bg="botox-img.webp"><span>Botox Injection</span></div>
-    <div class="box" data-bg="image1.jpeg"><span>Face Treatments</span></div>
-    <div class="box" data-bg="hair-removal-img.jpg"><span>Laser Hair Removal</span></div>
+    <div class="box" data-bg="botox-img.jpg"><span>Botox Injection</span></div>
+    <div class="box" data-bg="facetreatment.jpg"><span>Face Treatments</span></div>
+    <div class="box" data-bg="hairremoval.jpg"><span>Laser Hair Removal</span></div>
     <div class="box" data-bg="lip-fillers-img.jpg"><span>Lip Fillers</span></div>
   </div>
 </div>
@@ -1273,7 +1225,7 @@ body {
 
 <section class="why-choose-us">
   <div class="why-left">
-    <img src="choose-us.jpg" alt="Specialist Image" />
+    <img src="feature-img1.jpg" alt="Specialist Image" />
     <div class="card">
       <p>Get a free estimate or schedule an appointment with us.</p>
       <a href="#">Get Started →</a>
@@ -1285,7 +1237,7 @@ body {
       We Are Committed To Providing Exceptional Cosmetic Procedures & Skin Care
     </h2>
     <p class="why-description">
-      At Pure Skin Clinic Dubai, you can get a full range of dermatological and skin care services performed by the best professionals at the best possible price! We have a dedicated team of specialists with extensive experience in dealing with various dental and skin problems. Our main goal is to provide our patients with the highest standards of skincare without draining their budget.
+      At Derma Shine Skin & Hair Clinic, you can get a full range of dermatological and skin care services performed by the best professionals at the best possible price! We have a dedicated team of specialists with extensive experience in dealing with various dental and skin problems. Our main goal is to provide our patients with the highest standards of skincare without draining their budget.
     </p>
     <ul class="why-features">
       <li><span>👩‍⚕️</span> Team of highly skilled specialists.</li>
@@ -1750,7 +1702,7 @@ body {
 <footer>
   <div class="footer-container">
     <div class="footer-column">
-      <div class="logo">PURE <span>Skin Clinic</span></div>
+      <div class="logo">DERMA SHINE SKIN & <span> HAIR CLINIC</span></div>
       <div class="social-icons">
         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 	<path fill="#fff" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02" stroke-width="0.5" stroke="#fff" />
@@ -1793,10 +1745,9 @@ body {
     <div class="footer-column">
       <h4>Make Appointment</h4>
       <ul>
-        <li> 📞+971 52 224 5510</li>
-        <li> 📞 +971 4 852 6990</li>
-        <li>✉️ admin@gmail.com</li>
-        <li>📍Narela, Delhi</li>
+        <li> 📞+91 9548950589</li>
+        <li>✉️ Info@dermashine.in</li>
+        <li>📍Sarai Tarin, Uttar Pradesh</li>
       </ul>
     </div>
   </div>
@@ -1889,7 +1840,7 @@ body {
   
 </footer>
  <div class="footer-bottom">
-    Copyright © 2025 <span>Pure Skin Clinic </span>, All Rights Reserved. Design By <span>Neighshop Global</span>.
+    Copyright © 2025 <span>Derma Shine Skin & Hair Clinic</span>, All Rights Reserved. Designed By <span>Neighshop Global</span>.
 
 <style>
       .footer-bottom {
