@@ -2132,200 +2132,231 @@ Skin & Hair Specialist <br>
 </section>
 
 
-<section class="testimonial-section">
-  <h2>What Our Patients Say</h2>
-  <div class="testimonial-grid">
 
 
-    
-    <div class="testimonial-card">
-      <img src="google.png" alt="Google" class="google-logo">
-      <div class="testimonial-header">
-        <div class="initial-avatar avatar-black">H</div>
-        <div class="testimonial-info">
-          <h3>Hassan Raghib</h3>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <p>"I had a fantastic experience at Derma Shine Skin and Care Clinic! My consultation was thorough, and I left feeling refreshed with glowing skin. Highly recommend for anyone looking to elevate their skincare routine!"</p>
+<section class="custom-testimonial-section">
+  <h2 style="display: flex;
+  justify-content:center; margin-top:20px;">WHAT OUR PATIENTS SAY</h2>
+  <div class="testimonial-container">
+    <div class="brown-box"></div>
+
+    <div class="testimonial-slider" id="testimonial-slider">
+      <!-- Slides will be injected here -->
     </div>
 
-
-      <div class="testimonial-card">
-      <img src="google.png" alt="Google" class="google-logo">
-      <div class="testimonial-header">
-        <div class="initial-avatar avatar-red">M</div>
-        <div class="testimonial-info">
-          <h3>Mohd Shahabuddin</h3>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <p>"You did a very good allergy treatment, now my skin has become much better than before. Thank you so much Dr. Samreen."</p>
+    <div class="testimonial-image">
+      <img src="comment-img.jpg" alt="Treatment" />
     </div>
-
-    <div class="testimonial-card">
-      <img src="google.png" alt="Google" class="google-logo">
-      <div class="testimonial-header">
-        <div class="initial-avatar avatar-blue">S</div>
-        <div class="testimonial-info">
-          <h3>Shuaib Editz</h3>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <p>"I did a hydra facial here and it worked very well and gave me a lot of glow."</p>
-    </div>
-
-  
-
-    <div class="testimonial-card">
-      <img src="google.png" alt="Google" class="google-logo">
-      <div class="testimonial-header">
-        <div class="initial-avatar avatar-green">F</div>
-        <div class="testimonial-info">
-          <h3>Fardeen Shaha</h3>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <p>"Best skin place in Sarai Tareen, Sambhal. Dr. Samreen is a very experienced doctor."</p>
-    </div>
-
-    <div class="testimonial-card">
-      <img src="google.png" alt="Google" class="google-logo">
-      <div class="testimonial-header">
-        <div class="initial-avatar avatar-lightblue">B</div>
-        <div class="testimonial-info">
-          <h3>Balram Goswamk</h3>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <p>"Good experience ma'am and good treatment. Best skin doctor — Dr. Samreen ma'am."</p>
-    </div>
-
-    <div class="testimonial-card">
-      <img src="google.png" alt="Google" class="google-logo">
-      <div class="testimonial-header">
-        <div class="initial-avatar avatar-purple">B</div>
-        <div class="testimonial-info">
-          <h3>Babar Khan</h3>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <p>"Beautiful skin requires commitment and a doctor like you. I feel blessed that I got both."</p>
-    </div>
-
   </div>
+  <style>
+  .testimonial-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px 0;
+  }
 
+  .brown-box {
+    background-color: #a26428;
+    border-radius: 8px;
+    padding: 100px 0;
+    width: 180px;
+    height: 350px;
+  }
 
-    <style>
-   
+  .testimonial-slider {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    padding: 30px 30px 50px;
+    margin-left: -90px;
+    overflow: hidden;
+    height: 300px;
+  }
 
-    .testimonial-section {
-      padding: 50px 20px;
-      background-color: #fff;
-      text-align: center;
-    }
+  .testimonial-slide {
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: translateX(100%);
+    width: 100%;
+  }
 
-    .testimonial-section h2 {
-      font-size: 2.5em;
-      color: #000000;
-      margin-bottom: 40px;
-      font-weight: bold;
-    }
+  .testimonial-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+  }
 
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  .testimonial-slide.exit-left {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 
-    .testimonial-card {
-      cursor: pointer;
-      position: relative;
-      background-color: #fff;
-      border: 1px solid #c5c5c5;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(255, 215, 0, 0.15);
-      text-align: left;
-      transition: transform 0.2s;
-    }
+  .initial-badge {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
 
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-    }
+  .stars {
+    text-align: center;
+    color: #FFD700;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
 
-    .google-logo {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 30px;
-    }
+  .testimonial-text {
+    text-align: center;
+    font-style: italic;
+    color: #444;
+    padding: 0 10px;
+    position: relative;
+  }
 
-  
+  .testimonial-text::after {
+    content: "❞";
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    font-size: 80px;
+    color: #fdeee2;
+    z-index: -1;
+  }
 
-    .testimonial-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  .author {
+    text-align: center;
+    margin-top: 15px;
+  }
 
-    
-    .initial-avatar {
-  width: 36px;
-  height: 36px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1em;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
+  .author h3 {
+    font-size: 1em;
+    color: #000;
+    margin: 0;
+  }
 
+  .author p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+  }
 
-    .avatar-blue { background-color: #007BFF; }
-    .avatar-black { background-color: #000000; }
-    .avatar-red { background-color: #8B0000; }
-    .avatar-green { background-color: #006400; }
-    .avatar-lightblue { background-color: #00BFFF; }
-    .avatar-purple { background-color: #800080; }
+  .testimonial-image img {
+    max-width: 550px;
+    border-radius: 16px;
+  }
 
-    .testimonial-info {
-      display: flex;
+  @media (max-width: 768px) {
+    .testimonial-container {
       flex-direction: column;
+      align-items: center;
     }
 
-    .testimonial-info h3 {
-      margin: 0;
-      font-size: 1.1em;
-      color: #000; /* Black color for name */
+    .testimonial-slider {
+      margin-left: 0;
+      width: 100%;
+      max-width: 500px;
+      height: 350px;
     }
 
-    .stars {
-      color: #FFD700;
-      font-size: 0.9em;
+    .testimonial-image img {
+      width: 100%;
+      display: none;
     }
 
-    .testimonial-card p {
-      font-size: 0.95em;
-      line-height: 1.6;
-      margin-top: 10px;
+    .brown-box {
+      display: none;
+    }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = [
+      {
+        text: "I had a fantastic experience at Derma Shine Skin and Care Clinic! Highly recommend for anyone looking to elevate their skincare routine!",
+        name: "Hassan Raghib"
+      },
+      {
+        text: "You did a very good allergy treatment, now my skin has become much better than before. Thank you so much Dr. Samreen.",
+        name: "Mohd Shahabuddin"
+      },
+      {
+        text: "I did a hydra facial here and it worked very well and gave me a lot of glow.",
+        name: "Shuaib Editz"
+      },
+      {
+        text: "Best skin place in Sarai Tareen, Sambhal. Dr. Samreen is a very experienced doctor.",
+        name: "Fardeen Shaha"
+      },
+      {
+        text: "Good experience ma'am and good treatment. Best skin doctor — Dr. Samreen ma'am.",
+        name: "Balram Goswami"
+      },
+      {
+        text: "Beautiful skin requires commitment and a doctor like you. I feel blessed that I got both.",
+        name: "Babar Khan"
+      }
+    ];
+
+    const container = document.getElementById("testimonial-slider");
+    let current = 0;
+
+    function createSlide(index) {
+      const item = testimonials[index];
+      const div = document.createElement("div");
+      div.className = "testimonial-slide";
+
+      div.innerHTML = `
+        <div class="initial-badge">${item.name[0]}</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">${item.text}</p>
+        <div class="author">
+          <h3>${item.name}</h3>
+          <p>Patient</p>
+        </div>
+      `;
+      return div;
     }
 
-    @media (max-width: 600px) {
-      .testimonial-section h2 {
-        font-size: 2em;
+    function showSlide(index) {
+      const prevSlide = container.querySelector(".testimonial-slide.active");
+      const newSlide = createSlide(index);
+
+      container.appendChild(newSlide);
+      void newSlide.offsetWidth;
+      newSlide.classList.add("active");
+
+      if (prevSlide) {
+        prevSlide.classList.remove("active");
+        prevSlide.classList.add("exit-left");
+        setTimeout(() => {
+          prevSlide.remove();
+        }, 600);
       }
     }
-  </style>
+
+    showSlide(current);
+
+    setInterval(() => {
+      current = (current + 1) % testimonials.length;
+      showSlide(current);
+    }, 4000);
+  });
+</script>
+
 </section>
-
-
-
-
 
 
 
